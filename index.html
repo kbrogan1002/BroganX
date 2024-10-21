@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BroganX</title>
+<link rel="icon" sizes="16x16" href="/icons/favicon.ico" type="type="image/x-icon">
+<link rel="icon" sizes="32x32" href="/icons/favicon.ico" type="type="image/x-icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/icons/favicon.ico">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="cookie-banner" class="cookie-banner">
+        <p>This website uses cookies to enhance your browsing experience. By continuing to use the site, you agree to the use of cookies. 
+          <a href="#" id="cookie-policy-link">Read our Privacy Policy</a> for more information.</p>
+        <button id="accept-cookies">Accept</button>
+    </div>
+    
+    <div class="container">
+        <div class="button-wrapper">
+            <a href="https://www.broganx.co.uk/jellyfin" class="button"> 
+                <img src="icons/Jellyfin.png" alt="Icon 1">
+            </a>
+            <p>JellyFin</p> 
+        </div>
+
+        <div class="button-wrapper">
+            <a href="https://www.broganx.co.uk/sonarr/login" class="button"> 
+                <img src="icons/sonarr.png" alt="Icon 1">
+            </a>
+            <p>TV Shows</p> 
+        </div>
+
+        <div class="button-wrapper">
+            <a href="https://www.broganx.co.uk/radarr/login" class="button"> 
+                <img src="icons/radarr.png" alt="Icon 1">
+            </a>
+            <p>Movies</p> 
+        </div>
+
+        <div class="button-wrapper">
+            <a href="https://www.broganx.co.uk/prowlarr/login" class="button"> 
+                <img src="icons/prowlarr.png" alt="Icon 1">
+            </a>
+            <p>Indexers</p> 
+        </div>
+
+        <div class="button-wrapper">
+            <div class="button"><img src="icon1.png" alt=""></div>
+            <p></p> 
+        </div>
+
+        <div class="button-wrapper">
+            <div class="button"><img src="icon1.png" alt=""></div>
+            <p></p> 
+        </div>
+
+        <div id="privacy-policy-modal" class="modal">
+            <div class="modal-content">
+              <span class="close-button">&times;</span>
+              <h2>Privacy Policy</h2>
+              <p> This Privacy Policy describes how [Website Name] (the "Site" or "we") collects, uses, and shares personal information of users ("you" or "your") in the United Kingdom. We are committed to protecting your privacy and complying with the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018.
+
+                Information We Collect
+                
+                We may collect the following types of personal information:
+                
+                    Information you provide directly: This includes information you provide when you use our Site, such as your name, email address, postal address, phone number, and any other information you choose to provide.
+                    Information we collect automatically: When you visit our Site, we may automatically collect certain information about your device and your use of the Site, such as your IP address, browser type, operating system, referring URLs, pages viewed, and the dates and times of your visits.   
+                
+                Information from third parties: We may receive information about you from third parties, such as social media platforms, analytics providers, and advertising partners.  
+                
+                How We Use Your Information
+                
+                We may use your personal information for the following purposes:
+                
+                    To provide and improve the Site: We use your information to operate the Site, provide you with the services you request, and improve the functionality and user experience of the Site.   
+                
+                To communicate with you: We may use your information to send you emails or other communications about the Site, such as updates, newsletters, and promotional materials.
+                To personalize your experience: We may use your information to personalize your experience on the Site, such as by showing you relevant content and advertisements.  
+                
+                    To comply with legal obligations: We may use your information to comply with applicable laws and regulations.
+                
+                Legal Basis for Processing
+                
+                We rely on the following legal bases to process your personal information:
+                
+                    Your consent: We may process your information based on your consent, such as when you sign up for our newsletter or agree to receive marketing communications.
+                    Contractual necessity: We may process your information to perform a contract with you, such as to provide you with the services you request.
+                    Legitimate interests: We may process your information for our legitimate interests, such as to improve the Site and prevent fraud.
+                    Legal obligations: We may process your information to comply with legal obligations.
+                
+                Sharing Your Information
+                
+                We may share your personal information with the following third parties:  
+                
+                    Service providers: We may share your information with service providers who assist us with operating the Site and providing our services, such as hosting providers, analytics providers, and email marketing providers.   
+                
+                Business partners: We may share your information with business partners who offer products or services that may be of interest to you.
+                Legal authorities: We may disclose your information to legal authorities if required to do so by law or in the good faith belief that such action is necessary to comply with a legal obligation, protect and defend our rights or property, or protect the personal safety of users of the Site or the public.  
+                
+                Data Retention
+                
+                We will retain your personal information for as long as necessary to fulfill the purposes for which it was collected, or as required by law.  
+                
+                Your Rights
+                
+                You have the following rights with respect to your personal information:
+                
+                    Right of access: You have the right to request access to your personal information.   
+                
+                Right to rectification: You have the right to request that we correct any inaccurate or incomplete personal information.
+                Right to erasure: You have the right to request that we delete your personal information.  
+                Right to restriction of processing: You have the right to request that we restrict the processing of your personal information.
+                Right to data portability: You have the right to request that we transfer your personal information to another organization.  
+                
+                    Right to object: You have the right to object to the processing of your personal information.
+                
+                To exercise any of these rights, please contact us using the contact information below.  
+                
+                Security
+                
+                We take reasonable measures to protect your personal information from unauthorized access, use, or disclosure. However, no method of transmission over the Internet or method of electronic storage is completely secure.  
+                
+                Changes to this Privacy Policy
+                
+                We may update this Privacy Policy from time to time. We will post any changes on the Site and notify you as required by law. </p> 
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Cookie Banner Script
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptButton = document.getElementById('accept-cookies');
+        const policyLink = document.getElementById('cookie-policy-link');
+        const privacyModal = document.getElementById('privacy-policy-modal');
+        const closeButton = document.querySelector('.close-button');
+    
+        // Check if user has already accepted cookies
+        const hasAcceptedCookies = localStorage.getItem('cookieAccepted') === 'true';
+        if (hasAcceptedCookies) {
+          cookieBanner.style.display = 'none';
+        }
+    
+        acceptButton.addEventListener('click', () => {
+          cookieBanner.style.display = 'none';
+          localStorage.setItem('cookieAccepted', 'true');
+        });
+    
+        policyLink.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent link from navigating
+          privacyModal.style.display = 'block';
+        });
+    
+        closeButton.addEventListener('click', () => {
+          privacyModal.style.display = 'none';
+        });
+    
+        // Close modal when clicking outside of it
+        window.addEventListener('click', (event) => {
+          if (event.target === privacyModal) {
+            privacyModal.style.display = 'none';
+          }
+        });
+      </script>
+</body>
+</html>
